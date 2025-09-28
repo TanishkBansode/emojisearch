@@ -48,7 +48,7 @@ def run_search_app():
             retrieved_emoji = emoji_data[result_index]
             similarity_score = distances[0][i]
             
-            print(f"  {i+1}. {retrieved_emoji['emoji']} (Similarity: {similarity_score:.4f})")
+            print(f"  {i+1}. {retrieved_emoji['emoji']} {retrieved_emoji['title']} (Similarity: {similarity_score:.4f})")
 
         print("--------------------------------------------------")
 
