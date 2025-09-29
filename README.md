@@ -5,7 +5,8 @@
 ### **Try It Out**
 
 You can use the web interface here:
-**[Hugging Face Space](https://huggingface.co/spaces/TanishkB/emojisearch/)**
+**[Hugging Face Space](https://huggingface.co/spaces/TanishkB/emojisearch/)**\
+Also Check out the [blog](https://www.sisymaru.xyz/blog/emojisearch) of this project.
 
 ### **Command Line Usage**
 
@@ -27,3 +28,4 @@ The search utility uses four different vector databases, allowing you to switch 
 | 4 | `Qwen/Qwen3-Embedding-0.6B` | `emoji_index_qwen.faiss` | Less effective |
 
 *Note: Models 3 & 4 are currently less effective, possibly due to they are generalist embedding models.*
+
