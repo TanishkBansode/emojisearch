@@ -1,15 +1,29 @@
-# EmojiSearch
+## EmojiSearch 🔎
 
-Makes searching emojis extremely easier.
+**EmojiSearch** simplifies finding the perfect emoji, making the process much faster.
 
-Just run `python search_cli.py` and then type your query.
-There are four vector databases, for 4 different models:
-(They are ranked based on their ability to 'guess' the emojis)
-1. all-mpnet-base-v2 - emoji_index.faiss
-2. BAAI/bge-base-en-v1.5 - emoji_index_BAAI.faiss
-3. google/embeddinggemma-300M - emoji_index_gemma.faiss
-4. Qwen/Qwen3-Embedding-0.6B - emoji_index_qwen.faiss \
-(3. and 4. are almost unusable, my current theory suggests that it might be because they are generalist models, and made to do a wide range of tasks.)
+### **Try It Out**
 
-so just change the index_file and processed_json_file in config of `search_cli.py`
-imo first one is better.
+You can use the web interface here:
+**[Hugging Face Space: `https://huggingface.co/spaces/TanishkB/emojisearch/`](https://www.google.com/search?q=%5Bhttps://huggingface.co/spaces/TanishkB/emojisearch/%5D\(https://huggingface.co/spaces/TanishkB/emojisearch/\))**
+
+### **Command Line Usage**
+
+1.  Run the CLI:
+    ```bash
+    python search_cli.py
+    ```
+2.  Type your search query.
+
+### **Vector Databases & Performance**
+
+The search utility uses four different vector databases, allowing you to switch between models by updating the `index_file` and `processed_json_file` in the `search_cli.py` config.
+
+| Rank | Model Name | Index File | Performance Note |
+| :---: | :--- | :--- | :--- |
+| **1** | **`all-mpnet-base-v2`** | `emoji_index.faiss` | **Recommended** (Best at "guessing" emojis) |
+| 2 | `BAAI/bge-base-en-v1.5` | `emoji_index_BAAI.faiss` | Good alternative |
+| 3 | `google/embeddinggemma-300M` | `emoji_index_gemma.faiss` | Less effective |
+| 4 | `Qwen/Qwen3-Embedding-0.6B` | `emoji_index_qwen.faiss` | Less effective |
+
+*Note: Models 3 & 4 are currently less effective, possibly due to they are generalist embedding models.*
