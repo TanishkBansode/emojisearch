@@ -5,7 +5,7 @@
 ### **Try It Out**
 
 You can use the web interface here:
-**[Hugging Face Space: `https://huggingface.co/spaces/TanishkB/emojisearch/`](https://www.google.com/search?q=%5Bhttps://huggingface.co/spaces/TanishkB/emojisearch/%5D\(https://huggingface.co/spaces/TanishkB/emojisearch/\))**
+**[Hugging Face Space](https://huggingface.co/spaces/TanishkB/emojisearch/)**
 
 ### **Command Line Usage**
 
