@@ -7,7 +7,6 @@ import time
 # --- Configuration ---
 processed_json_file = 'data.json'
 index_file = 'emoji_index.faiss'
-# --- MODEL UPGRADE (Must match the one used for indexing) ---
 model_name = 'all-mpnet-base-v2'
 
 def run_search_app():
@@ -33,7 +32,6 @@ def run_search_app():
         
         start_time = time.time()
         
-        # --- CRITICAL FIX ---
         # Normalize the query embedding just like the index embeddings.
         query_embedding = model.encode([query], normalize_embeddings=True)
         

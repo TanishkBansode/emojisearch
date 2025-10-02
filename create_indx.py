@@ -7,8 +7,7 @@ import time
 # --- Configuration ---
 processed_json_file = 'data.json'
 index_file = 'emoji_index.faiss'
-# --- MODEL UPGRADE ---
-model_name = 'BAAI/bge-base-en-v1.5' # A more powerful model for semantic search
+model_name = 'all-mpnet-base-v2' # A more powerful model for semantic search
 
 def create_and_save_index():
     print(f"Loading data from '{processed_json_file}'...")
@@ -24,7 +23,6 @@ def create_and_save_index():
     print("Generating embeddings...")
     start_time = time.time()
     
-    # --- CRITICAL FIX ---
     # Ensure normalization is enabled to make vectors comparable via cosine similarity.
     embeddings = model.encode(emoji_texts, normalize_embeddings=True, show_progress_bar=True)
 
